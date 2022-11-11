@@ -37,10 +37,10 @@ setlocal ENABLEDELAYEDEXPANSION
 for /f "delims=" %%a IN ('dir /b /s "%sourceFolder%\*.pdf"') do (
     set str="XX_%%a-page-1.pdf"
     set find1=XX_%sourceFolder%
-    echo Replacing "%find1%" in "%str%" with "%targetFolder%"
+    @REM echo Replacing "%find1%" in "%str%" with "%targetFolder%"
     call set target=%%str:XX=11%%
-    @REM echo copy "%%a" "XX_%%a-page-1.pdf" >> %logFile%
-    echo copy "%%a" "%target%" XXX >> %logFile%
+    echo copy "%%a" "XX_%%a-page-1.pdf" >> %logFile%
+    @REM echo copy "%%a" "%target%" XXX >> %logFile%
 )
  
  
