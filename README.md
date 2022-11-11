@@ -10,9 +10,11 @@
 
 ## How to convert PDFs?
 - Execute prepare.bat like this:
-    - prepare.bat "<source folder>" "<target folder>"
+    - prepare.bat "[source folder]" "[target folder]"
 - Example: prepare.bat "C:\My Files\PDFs" "C:\My Files\PDF Cover Pages"
 - Note:
+    - Both folder path must be specified in double quotes
+    - Path MUST not have trailing \ at the end
     - You must use full path (do not use relative path)
     - Both the souce and target folders must exist
     - Target folder must be empty
