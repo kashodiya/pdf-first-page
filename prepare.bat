@@ -39,8 +39,8 @@ for /f "delims=" %%a IN ('dir /b /s "%sourceFolder%\*.pdf"') do (
     set find1=XX_%sourceFolder%
     @REM echo Replacing "%find1%" in "%str%" with "%targetFolder%"
     call set target=%%str:XX=11%%
-    echo copy "%%a" "XX_%%a-page-1.pdf" >> %logFile%
-    @REM echo copy "%%a" "%target%" XXX >> %logFile%
+    echo pdftk "%%a" cat 1-1 output "XX_%%a-page-1.pdf" >> %logFile%
+    @REM echo pdftk "%%a" cat 1-1 output "%target%" XXX >> %logFile%
 )
  
  
